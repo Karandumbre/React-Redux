@@ -1,68 +1,136 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Redux Example App
 
-## Available Scripts
+This is a simple React application demonstrating the use of Redux for state management. The app includes functionality to buy cakes and ice creams, with the respective counters being displayed on the screen and decremented upon each purchase.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Demo](#demo)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the App](#running-the-app)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+A live demo of the application can be found [here](#).
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Buy cakes and ice creams
+- Decrement the counter on each purchase
+- Display the updated counters on the screen
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before you begin, ensure you have the following tools installed on your system:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [Node.js and npm](https://nodejs.org/en/download/)
+- [Yarn](https://yarnpkg.com/getting-started/install) (optional, but recommended)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+1. **Clone the repository**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   git clone https://github.com/YourUsername/redux-example-app.git
+   cd redux-example-app
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   yarn install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   or
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Start the development server**
 
-### Code Splitting
+   ```bash
+   yarn start
+   ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+   or
 
-### Analyzing the Bundle Size
+   ```bash
+   npm start
+   ```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+2. **Open your browser**
 
-### Making a Progressive Web App
+   Navigate to `http://localhost:3000` to view the app.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Project Structure
 
-### Advanced Configuration
+```
+root
+├── src
+│   ├── components
+│   │   ├── CakeContainer.js
+│   │   ├── IceCreamContainer.js
+│   │   └── ...
+│   ├── redux
+│   │   ├── cake
+│   │   │   ├── cakeActions.js
+│   │   │   ├── cakeReducer.js
+│   │   │   └── cakeTypes.js
+│   │   ├── iceCream
+│   │   │   ├── iceCreamActions.js
+│   │   │   ├── iceCreamReducer.js
+│   │   │   └── iceCreamTypes.js
+│   │   ├── store.js
+│   │   └── rootReducer.js
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── public
+│   ├── index.html
+│   └── ...
+├── package.json
+├── README.md
+└── ...
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Usage
 
-### Deployment
+- **Buying Cakes**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+  - Click the "Buy Cake" button to decrement the cake counter.
 
-### `npm run build` fails to minify
+- **Buying Ice Creams**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+  - Click the "Buy Ice Cream" button to decrement the ice cream counter.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+Happy Coding!
+
+If you have any questions or suggestions, feel free to contact me at [karandumbre1@gmail.com](mailto:karandumbre1@gmail.com).
+
+---
+
+© 2024 Redux Example App. All rights reserved.

@@ -1,24 +1,20 @@
-import {
-    createStore,
-    combineReducers,
-    applyMiddleware
-} from 'redux';
+import { configureStore } from "@reduxjs/toolkit";
+import cakeReducer from "./Cake/CakeReducer";
+import iceCreamReducer from "./IceCream/IceCreamReducer";
+import logger from "redux-logger";
 
-import cakeReducers from './Cake/CakeReducer';
-import iceCreamReducer from './IceCream/IceCreamReducer';
-import logger from 'redux-logger';
-import {
-    composeWithDevTools
-} from 'redux-devtools-extension';
+// Combine reducers
+const rootReducer = {
+  cake: cakeReducer,
+  iceCream: iceCreamReducer,
+};
 
+// Configure the store with reducers and middleware
+const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  devTools: process.env.NODE_ENV !== "production", // Enable DevTools in development mode only
+});
 
-const rootReducer = combineReducers({
-    cake: cakeReducers,
-    iceCream: iceCreamReducer
-})
-
-
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(logger)))
-
-// console.log('Initial State', store.getState());
+// Export the store
 export default store;

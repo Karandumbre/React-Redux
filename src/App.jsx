@@ -1,18 +1,16 @@
 import React, { Component } from "react";
-import "./App.css";
-import CakeContainer from './Components/CakeContainer';
-import HooksCakeContainer from './Components/HooksCakeContainer';
-import IceCreamContainer from './Components/IceCreamContainer';
+import CakeContainer from "./components/CakeContainer";
+import HooksCakeContainer from "./components/HooksCakeContainer";
+import IceCreamContainer from "./components/IceCreamContainer";
 // import NewCakeContainer from './Components/NewCakeContainer';
 // import ItemContainer from './Components/ItemContainer';
 // import UserContainer from './Components/UserCointainer';
 // import store from './ReduxAsync/store';
-import TestContainerRedux from './Components/TestContainerRedux';
-import UserData from './Components/UserData';
-import Loader from './Common/loader';
-import { connect } from 'react-redux';
+import TestContainerRedux from "./components/TestContainerRedux";
+import UserData from "./components/UserData";
+import Loader from "./common/loader";
+import { connect } from "react-redux";
 class App extends Component {
-
   render() {
     // const loader = (this.props.currentState.user.loading) ? <Loader></Loader> : '';
     return (
@@ -33,15 +31,12 @@ class App extends Component {
             <UserData></UserData>
           </div>
         </div> */}
-
       </div>
     );
   }
 }
 
-
 const mapStateToProps = (state) => {
-  return { currentState: state }
-}
+  return { currentState: state };
+};
 export default connect(mapStateToProps)(App);
-
