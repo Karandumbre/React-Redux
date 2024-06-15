@@ -133,4 +133,8 @@ If you have any questions or suggestions, feel free to contact me at [karandumbr
 
 ---
 
+## Demo
+<img width="1435" alt="Screenshot 2024-06-16 at 12 30 01 AM" src="https://github.com/Karandumbre/React-Redux/assets/40163773/17a68bf4-7f88-43ff-ab63-e8bb1d39f33a">
+
+
 © 2024 Redux Example App. All rights reserved.
